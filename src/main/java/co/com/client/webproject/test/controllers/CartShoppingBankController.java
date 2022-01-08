@@ -32,7 +32,7 @@ public class CartShoppingBankController {
 
         } catch (WebActionsException e)
         {
-            Report.reportFailure("Ocurrio un error al intentar crear una cuenta.", e);
+            Report.reportFailure("Ocurrio un error al navegar en el carro de compras hacia el pago por banco", e);
         }
     }
 }

@@ -15,9 +15,7 @@ import cucumber.api.java.Before;
 import cucumber.api.java.es.Cuando;
 import cucumber.api.java.es.Dado;
 import cucumber.api.java.es.Entonces;
-import org.assertj.core.api.Assertions;
 
-import static co.com.client.webproject.test.helpers.Dictionary.SPACE_STRING;
 
 public class ShopingCartStepsDefinition extends GeneralSetup {
 
@@ -50,7 +48,7 @@ public class ShopingCartStepsDefinition extends GeneralSetup {
             createAnAccountWebController.crearUnaCuenta();
             customer = createAnAccountWebController.getCustomer();
         }catch (Exception e){
-            Assertions.fail("Error en el setup Scenario 1 del cart shopping");
+            Report.reportFailure("Error en el setup Scenario 1 del cart shopping");
         }
     }
 
@@ -65,7 +63,7 @@ public class ShopingCartStepsDefinition extends GeneralSetup {
             cartShoppingBankController.setWebAction(webAction);
             cartShoppingBankController.readyToPayWithBank();
         }catch (Exception e){
-            Assertions.fail("Error en la compra del Scenario 1 del cart shopping");
+            Report.reportFailure("Error en la compra del Scenario 1 del cart shopping");
         }
 
     }
@@ -80,7 +78,7 @@ public class ShopingCartStepsDefinition extends GeneralSetup {
                     .thatString(bankValidation.bankPaymentOk())
                     .isEqualTo(bankOk);
         }catch (Exception e){
-            Assertions.fail("Error en la validacion del Scenario 1 del cart shopping");
+            Report.reportFailure("Error en la validacion del Scenario 1 del cart shopping");
         }
 
     }
@@ -102,7 +100,7 @@ public class ShopingCartStepsDefinition extends GeneralSetup {
             createAnAccountWebController.crearUnaCuenta();
             customer = createAnAccountWebController.getCustomer();
         }catch (Exception e){
-            Assertions.fail("Error en el setup Scenario 2 del cart shopping");
+            Report.reportFailure("Error en el setup Scenario 2 del cart shopping");
         }
     }
 
@@ -117,7 +115,7 @@ public class ShopingCartStepsDefinition extends GeneralSetup {
             cartShoppingChekController.setWebAction(webAction);
             cartShoppingChekController.readyToPayWithChek();
         }catch (Exception e){
-            Assertions.fail("Error en la compra del Scenario 2 del cart shopping");
+            Report.reportFailure("Error en la compra del Scenario 2 del cart shopping");
         }
     }
 
@@ -131,7 +129,7 @@ public class ShopingCartStepsDefinition extends GeneralSetup {
                     .thatString(checkValidation.checkPaymentOk())
                     .isEqualTo(checkOk);
         }catch (Exception e){
-            Assertions.fail("Error en la validacion del Scenario 2 del cart shopping");
+            Report.reportFailure("Error en la validacion del Scenario 2 del cart shopping");
         }
     }
 

@@ -35,7 +35,7 @@ public class CreateContactUsController {
 
         } catch (WebActionsException e)
         {
-            Report.reportFailure("Ocurrio un error al intentar crear una cuenta.", e);
+            Report.reportFailure("Ocurrio un error al intentar mandar el mensaje", e);
         }
     }
 
@@ -52,7 +52,7 @@ public class CreateContactUsController {
 
         } catch (WebActionsException e)
         {
-            Report.reportFailure("Ocurrio un error al intentar crear una cuenta.", e);
+            Report.reportFailure("No se reporto el error del no envio del mensaje.", e);
         }
     }
 }

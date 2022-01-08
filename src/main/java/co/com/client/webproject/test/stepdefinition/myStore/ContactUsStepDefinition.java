@@ -18,7 +18,7 @@ import cucumber.api.java.Before;
 import cucumber.api.java.es.Cuando;
 import cucumber.api.java.es.Dado;
 import cucumber.api.java.es.Entonces;
-import org.assertj.core.api.Assertions;
+
 
 public class ContactUsStepDefinition extends GeneralSetup {
 
@@ -48,7 +48,7 @@ public class ContactUsStepDefinition extends GeneralSetup {
             loginPageWebController.irHaciaContactUsPage();
 
         } catch (Exception e) {
-            Assertions.fail("Error en el setup Scenario 1 del Contact Us");
+            Report.reportFailure("Error en el setup Scenario 1 del Contact Us");
         }
     }
 
@@ -61,7 +61,7 @@ public class ContactUsStepDefinition extends GeneralSetup {
             contactUsFillUp = createContactUsController.getContactUsFillUp();
 
         } catch (Exception e) {
-            Assertions.fail("Error en el llenado del Scenario 1 del Contact Us");
+            Report.reportFailure("Error en el llenado del Scenario 1 del Contact Us");
         }
     }
 
@@ -76,7 +76,7 @@ public class ContactUsStepDefinition extends GeneralSetup {
                     .isEqualTo(answerOk);
 
         } catch (Exception e) {
-            Assertions.fail("Error en la validacion del Scenario 1 del Contact Us");
+            Report.reportFailure("Error en la validacion del Scenario 1 del Contact Us");
         }
     }
 
@@ -95,7 +95,7 @@ public class ContactUsStepDefinition extends GeneralSetup {
             loginPageWebController.irHaciaContactUsPage();
 
         } catch (Exception e) {
-            Assertions.fail("Error en el setup Scenario 2 del Contact Us");
+            Report.reportFailure("Error en el setup Scenario 2 del Contact Us");
         }
     }
 
@@ -108,7 +108,7 @@ public class ContactUsStepDefinition extends GeneralSetup {
             contactUsFillUp = createContactUsController.getContactUsFillUp();
 
         } catch (Exception e) {
-            Assertions.fail("Error en el llenado del Scenario 2 del Contact Us");
+            Report.reportFailure("Error en el llenado del Scenario 2 del Contact Us");
         }
     }
 
@@ -123,7 +123,7 @@ public class ContactUsStepDefinition extends GeneralSetup {
                     .isEqualTo(answerError);
 
         } catch (Exception e) {
-            Assertions.fail("Error en la validacion del Scenario 2 del Contact Us");
+            Report.reportFailure("Error en la validacion del Scenario 2 del Contact Us");
         }
     }
 

@@ -27,7 +27,7 @@ public class DressesSectionController {
 
         } catch (WebActionsException e)
         {
-            Report.reportFailure("Ocurrio un error al intentar crear una cuenta.", e);
+            Report.reportFailure("Ocurrio un error al seleccionar las prendas en Dresses.", e);
         }
     }
 }
