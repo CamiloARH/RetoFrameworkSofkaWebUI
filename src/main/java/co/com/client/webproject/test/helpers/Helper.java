@@ -74,7 +74,6 @@ public class Helper {
         return customer;
     }
 
-
     public static ContactUsFillUp generateContactUs(String language, String country, String emailDomain){
 
         Faker faker =  Faker.instance(
